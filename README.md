@@ -1,0 +1,1 @@
+GreenLeaf Nursery is a small plant nursery that keeps its stock and billing records on paper, which can lead to stock mismatches and billing mistakes. This is a Java - based application console to manage plants, customer orders, bills and track stock, built for better management of the nursery.
