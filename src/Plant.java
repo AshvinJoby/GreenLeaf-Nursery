@@ -4,9 +4,9 @@ public class Plant {
     String name;
     double pricePerUnit;
     int stockQty;
-    String supplier;
+    Supplier supplier;
 
-    Plant(int plantId, String name, double pricePerUnit, int stockQty, String supplier){
+    Plant(int plantId, String name, double pricePerUnit, int stockQty, Supplier supplier){
         this.plantId = plantId;
         this.name = name;
         this.pricePerUnit = pricePerUnit;
