@@ -16,4 +16,8 @@ public class Customer {
             discount = 0;
         }
     }
+
+    public double getDiscount() {
+        return discount;
+    }
 }

@@ -1,11 +1,11 @@
-import java.util.List;
+import java.util.ArrayList;
 
 public class Order {
-    int noOfItems;
-    List<OrderItem> order;
+    Customer customer;
+    ArrayList<OrderItem> order;
 
-    Order(int noOfItems, List<OrderItem> order){
-        this.noOfItems = noOfItems;
+    Order(Customer customer, ArrayList<OrderItem> order){
+        this.customer = customer;
         this.order = order;
     }
 }
