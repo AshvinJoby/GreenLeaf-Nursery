@@ -12,7 +12,7 @@ public class Bill {
 
     public void processBill(){
         double subtotal = 0;
-        ArrayList<OrderItem> orderItems = order.order;
+        ArrayList<OrderItem> orderItems = order.itemList;
 
         for (OrderItem item : orderItems) {
             Plant plant = item.plant;
