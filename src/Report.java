@@ -34,6 +34,7 @@ public class Report {
         }
 
         report.add("Bill amount : " + bill.getBillingPrice());
+        report.add("Payment mode : " + bill.paymentMode.paymentMode);
 
     }
 

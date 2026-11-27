@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class Bill {
     Order order;
-    String paymentMode;
+    PaymentMode paymentMode;
     double billingPrice;
 
-    Bill(Order order, String paymentMode){
+    Bill(Order order, PaymentMode paymentMode){
         this.order = order;
         this.paymentMode = paymentMode;
     }
@@ -20,7 +20,7 @@ public class Bill {
             subtotal += itemPrice * plant.category.discount;
         }
 
-        // order discount is subtotal is more than 1,000
+        // order discount if subtotal is more than 1,000
         if (subtotal > 1000){
             subtotal *= 0.9;
         }
@@ -32,9 +32,7 @@ public class Bill {
         billingPrice *= 1.05;
 
         // payment processing fee
-        if (paymentMode.equals("Card")){
-            billingPrice *= 1.02;
-        }
+        billingPrice *= (1.0 + paymentMode.processing_fee_percent);
     }
 
     public double getBillingPrice() {
