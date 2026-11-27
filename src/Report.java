@@ -4,10 +4,12 @@ public class Report {
     Customer customer;
     Bill bill;
     ArrayList<String> report = new ArrayList<>();
+    int billLength;
 
     Report(Customer customer, Bill bill){
         this.customer = customer;
         this.bill = bill;
+        billLength = 0;
     }
 
     public void generateReport(){
@@ -31,6 +33,8 @@ public class Report {
             }
 
             report.add("Care tip : " + item.plant.category.careTip);
+
+            billLength += 1;
         }
 
         report.add("Bill amount : " + bill.getBillingPrice());
